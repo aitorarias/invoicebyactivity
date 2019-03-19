@@ -10,7 +10,31 @@
 </head>
  
 <body>
-<a href="index.php">Vuelve a la pantalla principañ</a> <br />
+<nav class="navbar is-danger">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="./index.php">
+        <i class="fas fa-user-secret"></i>
+        </a>
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-start">
+    <a class="navbar-item">
+        Logueate
+      </a>
+      <a class="navbar-item" href="./index.php">
+        Vuelve atrás 🔙
+      </a>
+    </div>
+
+    </div>
+  </div>
+</nav>
 <?php
 include("connect.php");
  
@@ -45,16 +69,16 @@ if(isset($_POST['submit'])) {
     }
 } else {
 ?>
-    <p><font size="+2">Login</font></p>
+    
     <form name="form1" method="post" action="">
-        <table width="75%" border="0">
+        <table class="table">
             <tr> 
                 <td width="10%">Nombre de usuario</td>
-                <td><input type="text" name="username"></td>
+                <td><input type="text" name="username" class="input is-primary" placeholder="Introduzca su nombre de usuario"></td>
             </tr>
             <tr> 
                 <td>Contraseña</td>
-                <td><input type="password" name="password"></td>
+                <td><input type="password" name="password" class="input is-danger" placeholder="Introduzca su contraseña"></td>
             </tr>
             <tr> 
                 <td>&nbsp;</td>
